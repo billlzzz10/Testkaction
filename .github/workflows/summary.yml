@@ -24,6 +24,8 @@ jobs:
             Summarize the following GitHub issue in one paragraph:
             Title: ${{ github.event.issue.title }}
             Body: ${{ github.event.issue.body }}
+        env:
+          Smart_composer_token: ${{ secrets.Smart_composer_token }}
 
       - name: Comment with AI summary
         run: |
